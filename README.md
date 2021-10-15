@@ -13,16 +13,18 @@ Data Preprocessing
 -What variable(s) are considered the target(s) for your model?
    
     Starting Code:
-        The variable we are focusing on is ["IS_SUCCESFUL"] column 
-        
+        The variable we are focusing on is ["IS_SUCCESSFUL"] column 
+       
     Optimized Code: 
         Same as Starting Code
 
 -What variable(s) are considered to be the features for your model?
 
      Starting Code: 
+         ['APPLICATION_TYPE', 'AFFILATION', 'CLASSIFICATION', 'STATUS', 'INCOME_AMT', 'ASK_AMT','ORGANIZATION','SPECIAL_CONSIDERATIONS']
      
      Optimized Code:
+         On all three attempts ['APPLICATION_TYPE', 'AFFILATION', 'CLASSIFICATION', 'STATUS', 'INCOME_AMT', 'ASK_AMT'] were the features of the models
 
 -What variable(s) are neither targets nor features, and should be removed from the input data?
    
@@ -60,15 +62,35 @@ Compiling, Training, and Evaluating the Model
 
 -Were you able to achieve the target model performance?
 
-    Starting Code:
+    Starting Code: 
+    
+    No. The accuracy for the beginning code was 0.72 
     
     Optimized Code:
+    
+    -Attempt 1: No, but accuracy was rasied to 0.734
+    
+    -Attempt 2: No, accuracy was 0.735
+    
+    -Attempt 3: No, accuracy was 0.735
 
 -What steps did you take to try and increase model performance?
-
-    Starting Code:
     
     Optimized Code: 
+    
+    -Attempt 1: Simple change where more columns were Dropped. Dropped ['EIN', 'NAME','ORGANIZATION', 'SPECIAL_CONSIDERATIONS']
+    
+    -Attempt 2: Dropped the same columns as attempt 1 but then applied more layers 
+    
+    -Attempt 3: Dropped the same columns as attempt 1 but then employed an autooptimization code to run and find theb best model. 
 
 
 Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+
+      - Overall the codes were not able to produce an acurracy score of higher than 75%. With the optimization the accuracy jumped up from 0.72 to 0.73
+         which is not much. In terms of reccommending a different model, I would say that the next model should remove AFFILIATION due to it being an unncessary column
+         unless we are also looking at how the affiliation plays a role in success. Th ASK_AMT and APPLICATION_TYPE columns may need to be reexamined to potentially 
+         remove or consider the outliers such as T3 having a value count of 27037 for APPLICATION_TYPE while for ASK_AMT 5000 has a value count of 25398 compared
+         to everything else in the column only having a value count of 3, 2, or 1. This might help to reduce the data we are dealing with an may increase the accuracy
+         slightly though it is unknown whether it would increase past higher than 75% as I would think that the accuracy might only increase by at most 1% or as little 
+         as .03%. 
