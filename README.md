@@ -123,8 +123,7 @@ Summary: Summarize the overall results of the deep learning model. Include a rec
 
       - Overall the codes were not able to produce an acurracy score of higher than 75%. With the optimization the accuracy jumped up from 0.72 to 0.73
          which is not much. In terms of reccommending a different model, I would say that the next model should remove AFFILIATION due to it being an unncessary column
-         unless we are also looking at how the affiliation plays a role in success. Th ASK_AMT and APPLICATION_TYPE columns may need to be reexamined to potentially 
-         remove or consider the outliers such as T3 having a value count of 27037 for APPLICATION_TYPE while for ASK_AMT 5000 has a value count of 25398 compared
-         to everything else in the column only having a value count of 3, 2, or 1. This might help to reduce the data we are dealing with an may increase the accuracy
+         in my opinion unless we are also looking at how the affiliation plays a role in success. Th ASK_AMT and APPLICATION_TYPE columns may need to be reexamined to                    potentially remove or consider the outliers such as T3 having a value count of 27037 for APPLICATION_TYPE while for ASK_AMT 5000 has a value count of 25398 compared
+         to everything else in the column only having a value count of 3, 2, or 1. This might help in prepping te data and may increase the accuracy
          slightly though it is unknown whether it would increase past higher than 75% as I would think that the accuracy might only increase by at most 1% or as little 
-         as .03%. 
+         as .03% based on my results.
