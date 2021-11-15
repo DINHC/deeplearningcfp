@@ -1,5 +1,9 @@
 # deeplearningcfp
 
+Problem: 
+
+- It is sometimes hard to figure out whether a charity will end up doing well or end up crashing. This is where this code comes in.
+
 Overview: 
 
 - This code was made to read a charity data csv and train a machine learning to predict whether applicants for fundign will be successful. 
